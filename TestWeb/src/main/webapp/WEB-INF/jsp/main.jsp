@@ -7,6 +7,8 @@
 <title>main.jsp</title>
 </head>
 <body>
+<%-- <%@ include file="/WEB-INF/jsp/header.jsp" %> --%>
+<jsp:include page="/WEB-INF/jsp/header.jsp"></jsp:include>
 메인입니다
 </body>
 </html>
