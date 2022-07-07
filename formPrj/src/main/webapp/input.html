@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>input.html</title>
+    <style>
+        label {
+            display:inlin-block;
+            width:100px;
+            text-align: center;
+            background-color: lightgrey;
+        }
+    </style>
+</head>
+
+<body>
+    <label for="last_name" style ="display:inline-block; width: 80px;"> 이름 : </label>
+    <input type="text" name="last_name"><br>
+    <label for="id" style ="display:inline-block; width: 80px;"> 아이디 : </label>
+    <input type="text" id="id"><br>
+    <label for="userpw" style ="display:inline-block; width: 80px;"> 비밀번호 : </label>
+    <input type="password" name="userpw"><br>
+    <label for="tel" style ="display:inline-block; width: 80px;">연락처 : </label>
+    <input type="tel" name="tel" style ="width: 60px;"> -
+    <input type="tel" name="tel" style ="width: 60px;"> -
+    <input type="tel" name="tel" style ="width: 60px;"><br>
+    <label for="gender" style ="display:inline-block; width: 80px;">성별</label>
+    <input type="radio" id="Men" name="gender" value="M">
+    <label for="Men">남</label>
+    <input type="radio" id="Women" name="gender" value="F">
+    <label for="Women">여</label><br>
+    <label for="language" style ="display:inline-block; width: 80px;">사용언어</label>
+    <input type="checkbox" name="language" value="kor">한글
+    <input type="checkbox" name="language" value="eng">영어
+    <input type="checkbox" name="language" value="jp">일어
+    <input type="checkbox" name="language" value="ch">중국어<br>
+    <label for="text" style="position:relative;top: -33px;">자기소개 : </label>
+    <textarea cols="20" rows="5" id="text"></textarea><br>
+    <label for="nation">국적</label>
+    <select size = "1" id="nation">
+        <option value="korea">대한민국</option>
+        <option value="japan">일본</option>
+        <option value="china">중국</option>
+    </select><br>
+    <label for="color">좋아하는 색상</label>
+    <select size="1" id="color">
+        <option value="purple">보라색</option>
+        <option value="purple">검정색</option>
+        <option value="purple">파랑색</option>
+    </select><br>
+    <input type="submit" value = "제출">
+
+</body>
+
+</html>

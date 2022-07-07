@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>index.html</title>
+</head>
+<body>
+<!-- ctrl + space : 자동완성기능
+ctrl + 1 : import 또는 예외처리 -->
+<!-- 주석 처리 단축키 : ctrl + shift + /  -->
+<!-- 한줄 주석 처리 단축키 : ctrl + shift + c -->
+	<form action = "form.jsp" method = "get">
+		<label for = "last_name">이름 : </label>
+		<input type = "text" id = "last_name" name = "last_name" value = "admin"><br>
+		<input type = "text" name = "email"><br>
+		<input type = "text" name = "job_id" value = "IT_PROG" readonly><br>
+		<input type = "date" name = "hire_date"><br>
+		<input type = "hidden" name = "userpw" value = "1234"><br>
+		<label for = "Men">남자</label>
+		<input type = "radio" id = "Men" name = "gender" value = "M">
+		<label for = "Women">여자</label>
+		<input type = "radio" id = "Women" name = "gender" value = "F"><br>
+		<input type = "checkbox" name = "hobby" value = "read">독서
+		<input type = "checkbox" name = "hobby" value = "run">운동
+		<input type = "checkbox" name = "hobby" value = "cook">요리<br>
+		<input type = "range" min = "5" max = "10"> <!-- range : 숫자 조절 슬라이드 막대 -->
+		<input type = "submit" value = "전송">
+	</form>
+</body>
+</html>
