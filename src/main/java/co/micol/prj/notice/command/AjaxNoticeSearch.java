@@ -28,7 +28,7 @@ public class AjaxNoticeSearch implements Command {
 		
 		String jsonList = null;
 		try {
-			jsonList = mapper.writeValueAsString(list);
+			jsonList = mapper.writeValueAsString(list); // 객체 json 형식(string)으로 변환
 		} catch (JsonProcessingException e) {
 			e.printStackTrace();
 		}

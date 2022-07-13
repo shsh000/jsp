@@ -139,12 +139,12 @@ public class NoticeServiceImpl implements NoticeService {
 		// 목록 검색
 		List<NoticeVO> list = new ArrayList<>();
 		NoticeVO vo;
-		String sql = "SELECT * FROM NOTICE WHERE ? LIKE ? ";
+		String sql = "SELECT * FROM NOTICE WHERE " + key + " LIKE '%" + val + "%'";
 		try {
 			conn = dao.getConnection();
 			psmt = conn.prepareStatement(sql);
-			psmt.setString(1, key);
-			psmt.setString(2, "%" + val + "%");
+			//psmt.setString(1, key);
+			//psmt.setString(2, val);
 			rs = psmt.executeQuery();
 			while (rs.next()) {
 				vo = new NoticeVO();

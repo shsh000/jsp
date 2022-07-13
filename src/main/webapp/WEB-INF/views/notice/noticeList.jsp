@@ -24,7 +24,7 @@
 			</form>
 		</div>
 		<div>
-			<table border="1">
+			<table border="1" id="tt">
 				<thead>
 					<tr>
 						<th width="70">순번</th>
@@ -35,7 +35,7 @@
 						<th width="180">첨부파일</th>
 					</tr>
 				</thead>
-				<tbody>
+				<tbody id="tb">
 				<c:choose>
 					<c:when test="${not empty list}">
 						<c:forEach items="${list}" var="b">
@@ -77,13 +77,34 @@
 				data : {key : key, val : val}, // 넘겨줄 데이터
 				dataType : "json", // 받을 데이터 타입
 				success : function(result) {
-					console.log(result);
+					if(result.length > 0) {
+						jsonHtmlConvert(result);
+					} else {
+						alert("검색한 결과가 없습니다.");
+					}
 				},
 				error : function() {
 					
 				}
 			})
 			// ajax function Call
+		}
+		
+		function jsonHtmlConvert(data) {
+			$('tbody').remove();
+			var tbody = $("<tbody />");
+			$.each(data, function(index, item) {
+				var row = $("<tr />").append(
+						  $("<td />").text(item.noticeId),
+						  $("<td />").text(item.noticeWriter),
+						  $("<td />").text(item.noticeTitle),
+						  $("<td />").text(item.noticeDate),
+						  $("<td />").text(item.noticeAttach),
+						  $("<td />").text(item.noticeHit)
+				);
+				tbody.append(row);
+			});
+			$('table').append(tbody);
 			
 		}
 	</script>
