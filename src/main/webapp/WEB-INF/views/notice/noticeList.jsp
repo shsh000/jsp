@@ -14,7 +14,7 @@
 		<div><h1>게시글 목록</h1></div>
 		<div>
 			<form id="frm">
-				<select id=key name="key">
+				<select id="key" name="key">
  					<option value="notice_title">제목</option>
  					<option value="notice_subject">내용</option>
 					<option value="notice_writer">작성자</option>
